@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var scrollBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleView: UILabel!
@@ -44,16 +44,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_sender: UIButton, forEvent event: UIEvent) {
-        
-        let login = loginField.text!
-        let password = passwordField.text!
-        
-        if login == "admin" && password == "1234" {
-            print("Успешная авторизация")
-        } else {
-            print("Неправильный пароль или логин")
-        }
-        
+
     }
     
     @objc func keyboardWasShown(notification: Notification) {
@@ -66,6 +57,43 @@ class ViewController: UIViewController {
     @objc func keyboardWillBeHidden(notification: Notification) {
       scrollBottomConstraint.constant = 0
     }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        // Проверяем данные
+        let checkResult = checkUserData()
+        
+        // Если данные не верны, покажем ошибку
+        if !checkResult {
+            showLoginError()
+        }
+        
+        // Вернем результат
+        return checkResult
+    }
+    
+    func checkUserData() -> Bool {
+        guard let login = loginField.text,
+            let password = passwordField.text else { return false }
+        
+        if login == "admin" && password == "1234" {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func showLoginError() {
+        // Создаем контроллер
+        let alter = UIAlertController(title: "Ошибка", message: "Введены неверные данные пользователя", preferredStyle: .alert)
+        // Создаем кнопку для UIAlertController
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        // Добавляем кнопку на UIAlertController
+        alter.addAction(action)
+        // Показываем UIAlertController
+        present(alter, animated: true, completion: nil)
+    }
+
+
 }
 
     
