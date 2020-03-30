@@ -2,15 +2,17 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="nvleonovich_homework" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="BYZ-38-t0r" customClass="LoginViewController" customModule="nvleonovich_homework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BLU-yd-nQY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -30,7 +32,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kw4-GL-HM7">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="admin" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kw4-GL-HM7">
                                         <rect key="frame" x="50" y="136" width="314" height="34"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" keyboardKey="YES"/>
@@ -44,7 +46,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ljt-zW-JeH">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ljt-zW-JeH">
                                         <rect key="frame" x="50" y="231" width="314" height="34"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" keyboardKey="YES"/>
@@ -62,6 +64,7 @@
                                         </state>
                                         <connections>
                                             <action selector="loginPressedWith_sender:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="udg-PY-jpl"/>
+                                            <segue destination="qtA-vi-RgT" kind="presentation" id="VIA-zj-J8A"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -98,16 +101,215 @@
                     <connections>
                         <outlet property="loginButton" destination="Ktu-71-6ea" id="qcY-Ce-Jl7"/>
                         <outlet property="loginField" destination="Kw4-GL-HM7" id="YIy-0G-uTX"/>
-                        <outlet property="passwordField" destination="Ljt-zW-JeH" id="Mtr-0G-QH3"/>
+                        <outlet property="passwordField" destination="Ljt-zW-JeH" id="zDx-NB-Ir5"/>
                         <outlet property="scrollBottomConstraint" destination="K1v-9R-22c" id="06K-Se-PfB"/>
                         <outlet property="titleLoginField" destination="2Nq-rg-6Ld" id="khM-HW-NSf"/>
                         <outlet property="titlePasswordField" destination="f6s-Z3-3Pe" id="nCr-Yd-hzf"/>
-                        <outlet property="titleView" destination="jaf-Na-SKV" id="Qoa-LI-eGp"/>
+                        <outlet property="titleView" destination="jaf-Na-SKV" id="Kmj-v8-E0Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+            <point key="canvasLocation" x="-767" y="-559"/>
+        </scene>
+        <!--Profile Tab Bar Controller-->
+        <scene sceneID="NWY-1g-0PP">
+            <objects>
+                <tabBarController modalPresentationStyle="fullScreen" id="qtA-vi-RgT" customClass="ProfileTabBarController" customModule="nvleonovich_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ykP-VP-hlM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eV5-65-wRs" kind="relationship" relationship="viewControllers" destinationCreationSelector="itemOne" id="7Bh-9r-8rC"/>
+                        <segue destination="FAJ-G4-nUj" kind="relationship" relationship="viewControllers" id="bVk-l5-P5u"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g2B-gu-gAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="96" y="-559"/>
+        </scene>
+        <!--Groups List Navigation-->
+        <scene sceneID="zju-3e-KDz">
+            <objects>
+                <navigationController title="Groups List Navigation" modalPresentationStyle="fullScreen" id="FAJ-G4-nUj" customClass="GroupsNavigationController" customModule="nvleonovich_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Сообщества" id="bEa-DS-wAi"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jPr-iS-x5Y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BW7-F8-n7g" kind="relationship" relationship="rootViewController" id="uek-yK-CbG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xmk-oT-Ygm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="-160"/>
+        </scene>
+        <!--My groups-->
+        <scene sceneID="Rki-ov-bxG">
+            <objects>
+                <tableViewController title="My groups" id="BW7-F8-n7g" customClass="GroupsListView" customModule="nvleonovich_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rgm-BO-lgn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyGroup" id="2UB-c0-xDd">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2UB-c0-xDd" id="h97-oq-nmy">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BW7-F8-n7g" id="Lq6-hn-Uy7"/>
+                            <outlet property="delegate" destination="BW7-F8-n7g" id="vdW-jH-Iag"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Мои сообщества" id="wXs-aj-fBA">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="XvS-yh-4e1">
+                            <connections>
+                                <segue destination="VSN-kQ-PLh" kind="show" id="AsD-pF-BeZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wTu-Kl-G4H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2106" y="-160"/>
+        </scene>
+        <!--Add new groups-->
+        <scene sceneID="QAA-cI-S2Z">
+            <objects>
+                <tableViewController title="Add new groups" id="VSN-kQ-PLh" customClass="GroupsSearchView" customModule="nvleonovich_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="YKD-kr-fjU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddGroup" id="LhG-tQ-p6p">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LhG-tQ-p6p" id="r8M-AJ-jTM">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="VSN-kQ-PLh" id="C4k-Ps-H7L"/>
+                            <outlet property="delegate" destination="VSN-kQ-PLh" id="QZe-CB-bbW"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="SGi-ie-Qvd"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnK-2d-mv4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2977" y="-160"/>
+        </scene>
+        <!--My friends-->
+        <scene sceneID="MHz-3N-YBx">
+            <objects>
+                <tableViewController restorationIdentifier="Friend" storyboardIdentifier="Friend" title="My friends" id="rz6-yS-YaO" customClass="FriendsListView" customModule="nvleonovich_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y3a-B4-sIQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Friend" id="5R9-Lw-vzJ" customClass="CustomTableViewCell" customModule="nvleonovich_homework" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5R9-Lw-vzJ" id="RJv-mB-f5i">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cx-S3-H6X">
+                                            <rect key="frame" x="186" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="3Cx-S3-H6X" firstAttribute="centerX" secondItem="RJv-mB-f5i" secondAttribute="centerX" id="3Qx-eL-UAf"/>
+                                        <constraint firstItem="3Cx-S3-H6X" firstAttribute="top" secondItem="RJv-mB-f5i" secondAttribute="topMargin" id="Ymh-xW-bVV"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="3Cx-S3-H6X" secondAttribute="bottom" constant="0.5" id="zva-Fq-0y4"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="myName" destination="3Cx-S3-H6X" id="Tsx-9g-Jup"/>
+                                    <segue destination="S4i-uY-3hg" kind="show" id="Fvz-Hm-4ju"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rz6-yS-YaO" id="KcF-j5-nJ8"/>
+                            <outlet property="delegate" destination="rz6-yS-YaO" id="qc2-ae-pIu"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Мои друзья" id="hS9-Jh-wiR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Og-bf-h5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2142" y="-902"/>
+        </scene>
+        <!--Friend's photos-->
+        <scene sceneID="DzU-ep-1An">
+            <objects>
+                <collectionViewController title="Friend's photos" id="S4i-uY-3hg" customClass="FriendPhotoCollectionView" customModule="nvleonovich_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="uoH-bn-WPC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0yY-IC-L9V">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Photo" id="bdG-p1-P56">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xcR-LW-HEd">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="S4i-uY-3hg" id="Hl9-X5-ABe"/>
+                            <outlet property="delegate" destination="S4i-uY-3hg" id="DZ1-WQ-MEz"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="Lcz-DK-ebs"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tnm-7G-cTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2945" y="-902"/>
+        </scene>
+        <!--Friends List Navigation-->
+        <scene sceneID="HCa-hB-bsV">
+            <objects>
+                <navigationController title="Friends List Navigation" id="eV5-65-wRs" customClass="FriendsNavigationController" customModule="nvleonovich_homework" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Друзья" id="ZSY-bX-gxk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Un8-Wm-PWY">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rz6-yS-YaO" kind="relationship" relationship="rootViewController" id="QLv-qG-rqI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NFw-bW-6QX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="-902"/>
         </scene>
     </scenes>
 </document>
