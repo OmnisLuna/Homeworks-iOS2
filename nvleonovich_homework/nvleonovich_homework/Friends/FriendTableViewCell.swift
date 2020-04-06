@@ -12,5 +12,4 @@ class FriendTableViewCell: UITableViewCell {
     
     @IBOutlet weak var myFriendName: UILabel!
     @IBOutlet weak var myFriendAvatar: UIImageView!
-
 }
