@@ -22,7 +22,6 @@
 		04A9142C2430E434005ABD6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A9142A2430E434005ABD6A /* Main.storyboard */; };
 		04A9142E2430E435005ABD6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A9142D2430E435005ABD6A /* Assets.xcassets */; };
 		04A914312430E435005ABD6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A9142F2430E435005ABD6A /* LaunchScreen.storyboard */; };
-		04CB711B243BC23A000880BC /* LikeButtonControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CB711A243BC23A000880BC /* LikeButtonControl.swift */; };
 		04EBD5E2243A71E400D43888 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EBD5E1243A71E400D43888 /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		04A9142D2430E435005ABD6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04A914302430E435005ABD6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A914322430E435005ABD6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04CB711A243BC23A000880BC /* LikeButtonControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtonControl.swift; sourceTree = "<group>"; };
 		04EBD5E1243A71E400D43888 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +65,6 @@
 				0461FC5D24317F240049E9A8 /* FriendsPhotoCollectionViewController.swift */,
 				04000C3B2433F85E00E93B56 /* FriendsPhotoCollectionViewCell.swift */,
 				04EBD5E1243A71E400D43888 /* AvatarView.swift */,
-				04CB711A243BC23A000880BC /* LikeButtonControl.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -203,7 +200,6 @@
 				0461FC5824317E6A0049E9A8 /* GroupsSearchTableViewController.swift in Sources */,
 				0461FC5624317E430049E9A8 /* GroupsListTableViewController.swift in Sources */,
 				04000C3C2433F85E00E93B56 /* FriendsPhotoCollectionViewCell.swift in Sources */,
-				04CB711B243BC23A000880BC /* LikeButtonControl.swift in Sources */,
 				0461FC722431DB930049E9A8 /* FriendTableViewCell.swift in Sources */,
 				04000C3F2433F94C00E93B56 /* User.swift in Sources */,
 				0461FC5224317CB30049E9A8 /* ProfileTabBarController.swift in Sources */,

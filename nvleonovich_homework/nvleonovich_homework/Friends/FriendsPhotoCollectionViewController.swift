@@ -12,6 +12,8 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
     
     var photoLikesCount = [0 , 2 , 10]
     var buttonState = [false, true, false]
+    var colorDefault = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+    var colorLiked = #colorLiteral(red: 0.183355093, green: 0.4040111005, blue: 0.9123467207, alpha: 1)
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,21 +37,26 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendPhotoCell", for: indexPath) as! FriendsPhotoCollectionViewCell
         cell.LikesCount.text = "\(photoLikesCount[indexPath.row])"
         cell.HeartButton.isSelected = buttonState[indexPath.row]
+        
+        if buttonState[indexPath.row] {
+            cell.LikesCount.textColor = colorLiked
+        } else {
+            cell.LikesCount.textColor = colorDefault
+        }
+        
+        cell.heartButtoonTap = { [weak self] in
+            let a = indexPath.row
+            
+            self!.buttonState[a] = !self!.buttonState[a]
+            if self!.buttonState[a] {
+                self!.photoLikesCount[a] += 1
+            } else {
+                self!.photoLikesCount[a] -= 1
+            }
+            self!.collectionView.reloadItems(at: [indexPath])
+        }
         return cell
     }
-    
-    @IBAction func addLike() {
-        
-//            if buttonState == UIButton.State.highlighted {
-//                buttonState = UIButton.State.normal
-//                self.photoLikesCount = photoLikesCount - 1
-//            } else {
-//                buttonState = UIButton.State.highlighted
-//                self.photoLikesCount = photoLikesCount + 1
-//            }
-//                return photoLikesCount
-    }
-        
 }
 
     extension FriendsPhotoCollectionViewController: UICollectionViewDelegateFlowLayout {

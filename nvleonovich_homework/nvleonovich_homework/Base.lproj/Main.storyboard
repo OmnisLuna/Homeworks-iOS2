@@ -365,13 +365,13 @@
                                             <rect key="frame" x="102" y="124" width="44" height="22"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkM-Le-SYH">
-                                                    <rect key="frame" x="0.0" y="5.5" width="16.5" height="11"/>
+                                                    <rect key="frame" x="0.0" y="5" width="18" height="12"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b54-Rp-Y3G">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b54-Rp-Y3G">
                                                     <rect key="frame" x="22" y="0.0" width="22" height="22"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -379,11 +379,11 @@
                                                         <constraint firstAttribute="height" constant="22" id="N47-PS-Bk0"/>
                                                     </constraints>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <state key="normal" image="1200px-Heart_corazón.svg"/>
-                                                    <state key="selected" image="1200px-Heart_corazón.svg"/>
+                                                    <state key="normal" image="heart"/>
+                                                    <state key="selected" image="heart2"/>
                                                     <state key="highlighted" image="heart.fill" catalog="system"/>
                                                     <connections>
-                                                        <action selector="addLike" destination="S4i-uY-3hg" eventType="touchUpInside" id="Lse-cf-0xn"/>
+                                                        <action selector="clickLike:" destination="bdG-p1-P56" eventType="touchUpInside" id="pSB-as-tzZ"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -435,10 +435,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1200px-Heart_corazón.svg" width="1200" height="1200"/>
         <image name="DeathStarII" width="758" height="758"/>
         <image name="anakin.m6HvM" width="70" height="70"/>
         <image name="dfsdfs" width="70" height="70"/>
+        <image name="heart" width="1200" height="1106"/>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
+        <image name="heart2" width="1200" height="1106"/>
     </resources>
 </document>
