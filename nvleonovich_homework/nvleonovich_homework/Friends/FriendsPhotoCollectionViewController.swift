@@ -8,13 +8,11 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class FriendsPhotoCollectionViewController: UICollectionViewController {
     
     var photoLikesCount = [0 , 2 , 10]
-    var buttonState = UIButton.State.highlighted
-    
+    var buttonState = [false, true, false]
+        
     override func viewDidLoad() {
         super.viewDidLoad()
             
@@ -36,21 +34,22 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendPhotoCell", for: indexPath) as! FriendsPhotoCollectionViewCell
         cell.LikesCount.text = "\(photoLikesCount[indexPath.row])"
+        cell.HeartButton.isSelected = buttonState[indexPath.row]
         return cell
     }
     
     @IBAction func addLike() {
         
-        let indexPath = self.collectionView.indexPathsForSelectedItems
-        
-//        if buttonState == UIButton.State.highlighted {
-//                    buttonState = UIButton.State.normal
-//                    photoLikesCount[indexPath.row] = photoLikesCount[indexPath.row] - 1
-//                } else {
-//                    buttonState = UIButton.State.highlighted
-//                    photoLikesCount[indexPath.row] = photoLikesCount[indexPath.row] + 1
-//                }
+//            if buttonState == UIButton.State.highlighted {
+//                buttonState = UIButton.State.normal
+//                self.photoLikesCount = photoLikesCount - 1
+//            } else {
+//                buttonState = UIButton.State.highlighted
+//                self.photoLikesCount = photoLikesCount + 1
+//            }
+//                return photoLikesCount
     }
+        
 }
 
     extension FriendsPhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
