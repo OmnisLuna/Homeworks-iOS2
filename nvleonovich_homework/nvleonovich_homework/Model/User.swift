@@ -21,6 +21,16 @@ class User {
     }
 }
 
+class UserAuthParameters {
+    let login: String
+    let password: String
+    
+    init(login: String, password: String) {
+        self.login = login
+        self.password = password
+    }
+}
+
 class Group {
     var name: String
     var avatar: UIImage
@@ -34,19 +44,26 @@ class Group {
 class Friend {
     var name: String
     var avatar: UIImage
+    var photos: Array<Photo>
     
-    init(name: String, avatar: UIImage) {
+    init(name: String, avatar: UIImage, photos: Array<Photo>) {
     self.name = name
     self.avatar = avatar
+    self.photos = photos
+
     }
 }
 
-class UserAuthParameters {
-    let login: String
-    let password: String
+class Photo {
+    var id: Int
+    var description: String?
+    var likesCount: Int
+    var pic: UIImage
     
-    init(login: String, password: String) {
-        self.login = login
-        self.password = password
+    init(id: Int, description: String?, likesCount: Int, pic: UIImage) {
+        self.id = id
+        self.description = description
+        self.likesCount = likesCount
+        self.pic = pic
     }
 }

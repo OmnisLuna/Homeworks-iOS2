@@ -231,7 +231,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dfsdfs" translatesAutoresizingMaskIntoConstraints="NO" id="B0R-kC-byd" userLabel="Group Avatar">
-                                            <rect key="frame" x="15" y="-28" width="70" height="140.5"/>
+                                            <rect key="frame" x="15" y="7.5" width="70" height="70"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
@@ -351,29 +351,24 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendPhotoCell" id="bdG-p1-P56" customClass="FriendsPhotoCollectionViewCell" customModule="nvleonovich_homework" customModuleProvider="target">
-                                <rect key="frame" x="10" y="10" width="148.5" height="148"/>
+                                <rect key="frame" x="10" y="10" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="xcR-LW-HEd">
-                                    <rect key="frame" x="0.0" y="0.0" width="148.5" height="148"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DeathStarII" translatesAutoresizingMaskIntoConstraints="NO" id="NC2-Rq-WJD">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BCH-qF-C1f" userLabel="LikesBar">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BCH-qF-C1f" userLabel="LikesBar">
                                             <rect key="frame" x="102" y="124" width="44" height="22"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="suit.heart" catalog="system" highlightedImage="heart.fill" translatesAutoresizingMaskIntoConstraints="NO" id="ACp-er-It2">
-                                                    <rect key="frame" x="22" y="0.0" width="22" height="22"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </imageView>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LU9-AT-K2j">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LU9-AT-K2j">
                                                     <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkM-Le-SYH">
-                                                            <rect key="frame" x="2" y="4.5" width="16.5" height="11"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DkM-Le-SYH">
+                                                            <rect key="frame" x="3" y="5.5" width="16.5" height="11"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                                             <color key="textColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -385,19 +380,29 @@
                                                         <constraint firstItem="DkM-Le-SYH" firstAttribute="centerX" secondItem="LU9-AT-K2j" secondAttribute="centerX" id="XtX-z1-6LY"/>
                                                     </constraints>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b54-Rp-Y3G">
+                                                    <rect key="frame" x="22" y="0.0" width="22" height="22"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" image="1200px-Heart_corazón.svg">
+                                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="highlighted" image="heart.fill" catalog="system"/>
+                                                    <connections>
+                                                        <action selector="addLike" destination="S4i-uY-3hg" eventType="touchUpInside" id="Lse-cf-0xn"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="LU9-AT-K2j" secondAttribute="trailing" constant="22" id="0g1-di-aBr"/>
-                                                <constraint firstItem="ACp-er-It2" firstAttribute="leading" secondItem="BCH-qF-C1f" secondAttribute="leading" constant="22" id="9wD-ui-36o"/>
-                                                <constraint firstItem="ACp-er-It2" firstAttribute="top" secondItem="BCH-qF-C1f" secondAttribute="top" id="QCP-b4-Ocb"/>
-                                                <constraint firstAttribute="trailing" secondItem="ACp-er-It2" secondAttribute="trailing" id="SNC-kg-b8A"/>
+                                                <constraint firstAttribute="trailing" secondItem="b54-Rp-Y3G" secondAttribute="trailing" id="CS3-9A-uJt"/>
+                                                <constraint firstItem="b54-Rp-Y3G" firstAttribute="leading" secondItem="LU9-AT-K2j" secondAttribute="trailing" id="RbD-qG-Yio"/>
                                                 <constraint firstItem="LU9-AT-K2j" firstAttribute="centerY" secondItem="BCH-qF-C1f" secondAttribute="centerY" id="U78-0e-Bko"/>
-                                                <constraint firstAttribute="bottom" secondItem="ACp-er-It2" secondAttribute="bottom" id="XIK-Vs-NY4"/>
                                                 <constraint firstAttribute="bottom" secondItem="LU9-AT-K2j" secondAttribute="bottom" id="izl-g9-HW2"/>
                                                 <constraint firstItem="LU9-AT-K2j" firstAttribute="top" secondItem="BCH-qF-C1f" secondAttribute="top" id="qk6-jz-bnY"/>
                                                 <constraint firstItem="LU9-AT-K2j" firstAttribute="leading" secondItem="BCH-qF-C1f" secondAttribute="leading" id="uRO-Nb-OQu"/>
-                                                <constraint firstItem="ACp-er-It2" firstAttribute="centerY" secondItem="BCH-qF-C1f" secondAttribute="centerY" id="yQG-oY-Xbu"/>
+                                                <constraint firstItem="b54-Rp-Y3G" firstAttribute="top" secondItem="LU9-AT-K2j" secondAttribute="top" id="xIY-ED-Sga"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -410,7 +415,7 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="FriendsPhotoCell" destination="NC2-Rq-WJD" id="WQJ-Ay-PpI"/>
-                                    <outlet property="Heart" destination="ACp-er-It2" id="EuQ-6N-Qav"/>
+                                    <outlet property="HeartButton" destination="b54-Rp-Y3G" id="Wrr-Tc-hQz"/>
                                     <outlet property="LikesCount" destination="DkM-Le-SYH" id="Gma-8N-D02"/>
                                 </connections>
                             </collectionViewCell>
@@ -445,10 +450,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1200px-Heart_corazón.svg" width="1200" height="1200"/>
         <image name="DeathStarII" width="758" height="758"/>
         <image name="anakin.m6HvM" width="70" height="70"/>
         <image name="dfsdfs" width="70" height="70"/>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
-        <image name="suit.heart" catalog="system" width="64" height="54"/>
     </resources>
 </document>
