@@ -10,47 +10,34 @@ import Foundation
 import UIKit
 
 class User {
+    let id: Int
+    var login: String
+    var password: String
+    var name: String
+    var avatar: UIImage
+    var photos: Array<Photo>
     var groups: Array<Group>
-    var friends: Array<Friend>
-    var authParams: UserAuthParameters
     
-    init(authParams: UserAuthParameters, groups: Array<Group>, friends: Array<Friend>) {
-        self.authParams = authParams
-        self.groups = groups
-        self.friends = friends
-    }
-}
-
-class UserAuthParameters {
-    let login: String
-    let password: String
-    
-    init(login: String, password: String) {
+    init(id: Int, login: String, password: String, name: String, avatar: UIImage, photos: Array<Photo>, groups: Array<Group>) {
+        self.id = id
         self.login = login
         self.password = password
+        self.name = name
+        self.avatar = avatar
+        self.photos = photos
+        self.groups = groups
     }
 }
 
 class Group {
+    let id: Int
     var name: String
     var avatar: UIImage
     
-    init(name: String, avatar: UIImage) {
+    init(id: Int, name: String, avatar: UIImage) {
+    self.id = id
     self.name = name
     self.avatar = avatar
-    }
-}
-
-class Friend {
-    var name: String
-    var avatar: UIImage
-    var photos: Array<Photo>
-    
-    init(name: String, avatar: UIImage, photos: Array<Photo>) {
-    self.name = name
-    self.avatar = avatar
-    self.photos = photos
-
     }
 }
 
@@ -58,12 +45,40 @@ class Photo {
     var id: Int
     var description: String?
     var likesCount: Int
+    var isLikedByMe: Bool
     var pic: UIImage
     
-    init(id: Int, description: String?, likesCount: Int, pic: UIImage) {
+    init(id: Int, description: String?, likesCount: Int, isLikedByMe: Bool, pic: UIImage) {
         self.id = id
         self.description = description
         self.likesCount = likesCount
+        self.isLikedByMe = isLikedByMe
         self.pic = pic
+    }
+}
+    
+class Record {
+    
+    let id: Int
+    var owner: User
+    var publishDate: String
+    var description: String
+    var photos: Photo
+    var likesCount: Int
+    var commentsCount: Int
+    var reportsCount: Int
+    var viewsCount: Int
+    
+    
+    init(id: Int, owner: User, publishDate: String, description: String, photos: Photo, likesCount: Int, commentsCount: Int, reportsCount: Int, viewsCount: Int) {
+        self.id = id
+        self.description = description
+        self.photos = photos
+        self.owner = owner
+        self.publishDate = publishDate
+        self.likesCount = likesCount
+        self.commentsCount = commentsCount
+        self.reportsCount = reportsCount
+        self.viewsCount = viewsCount
     }
 }

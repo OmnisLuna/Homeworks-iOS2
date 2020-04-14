@@ -8,13 +8,15 @@
 
 import UIKit
 
+
 class FriendsPhotoCollectionViewController: UICollectionViewController {
     
-    var photoLikesCount = [0 , 2 , 10]
-    var buttonState = [false, true, false]
+    var currentUser: User!
+//    var photoLikesCount = [0 , 2 , 10]
+//    var isLiked = [false, true, false]
     var colorDefault = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
     var colorLiked = #colorLiteral(red: 0.183355093, green: 0.4040111005, blue: 0.9123467207, alpha: 1)
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
             
@@ -28,30 +30,30 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
     }
         
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return currentUser.photos.count
     }
         
     override func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendPhotoCell", for: indexPath) as! FriendsPhotoCollectionViewCell
-        cell.LikesCount.text = "\(photoLikesCount[indexPath.row])"
-        cell.HeartButton.isSelected = buttonState[indexPath.row]
-        
-        if buttonState[indexPath.row] {
-            cell.LikesCount.textColor = colorLiked
+        cell.likesCount.text = "\(currentUser.photos[indexPath.row].likesCount)"
+        cell.heartButton.isSelected = currentUser.photos[indexPath.row].isLikedByMe
+        cell.friendsPhoto.image = currentUser.photos[indexPath.row].pic
+        if currentUser.photos[indexPath.row].isLikedByMe {
+            cell.likesCount.textColor = colorLiked
         } else {
-            cell.LikesCount.textColor = colorDefault
+            cell.likesCount.textColor = colorDefault
         }
         
         cell.heartButtoonTap = { [weak self] in
-            let a = indexPath.row
+            let row = indexPath.row
             
-            self!.buttonState[a] = !self!.buttonState[a]
-            if self!.buttonState[a] {
-                self!.photoLikesCount[a] += 1
+            self!.currentUser.photos[row].isLikedByMe = !self!.currentUser.photos[row].isLikedByMe
+            if self!.currentUser.photos[row].isLikedByMe {
+                self!.currentUser.photos[row].likesCount += 1
             } else {
-                self!.photoLikesCount[a] -= 1
+                self!.currentUser.photos[row].likesCount -= 1
             }
             self!.collectionView.reloadItems(at: [indexPath])
         }
