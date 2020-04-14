@@ -10,9 +10,9 @@ import UIKit
 
 class FriendsPhotoCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var FriendsPhotoCell: UIImageView!
-    @IBOutlet weak var LikesCount: UILabel!
-    @IBOutlet weak var HeartButton: UIButton!
+    @IBOutlet weak var friendsPhoto: UIImageView!
+    @IBOutlet weak var likesCount: UILabel!
+    @IBOutlet weak var heartButton: UIButton!
     
     var heartButtoonTap: (() -> ())?
     
