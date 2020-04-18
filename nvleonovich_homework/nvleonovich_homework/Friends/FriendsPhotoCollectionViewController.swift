@@ -12,14 +12,12 @@ import UIKit
 class FriendsPhotoCollectionViewController: UICollectionViewController {
     
     var currentUser: User!
-//    var photoLikesCount = [0 , 2 , 10]
-//    var isLiked = [false, true, false]
-    var colorDefault = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-    var colorLiked = #colorLiteral(red: 0.183355093, green: 0.4040111005, blue: 0.9123467207, alpha: 1)
+    let animation = Animations()
+    var colorDefault = #colorLiteral(red: 0, green: 0.4539153576, blue: 1, alpha: 1)
+    var colorLiked = #colorLiteral(red: 0.8094672561, green: 0, blue: 0.2113229036, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
         self.collectionView.delegate = self
     }
         
@@ -46,6 +44,7 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
             cell.likesCount.textColor = colorDefault
         }
         
+        //замыкание для тапа на ячейку
         cell.heartButtoonTap = { [weak self] in
             let row = indexPath.row
             
@@ -56,12 +55,14 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
                 self!.currentUser.photos[row].likesCount -= 1
             }
             self!.collectionView.reloadItems(at: [indexPath])
+            self!.animation.increaseElementOnTap(cell.heartButton)
         }
         return cell
     }
+    
 }
 
-    extension FriendsPhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
+extension FriendsPhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             
             let cellWidth = 150

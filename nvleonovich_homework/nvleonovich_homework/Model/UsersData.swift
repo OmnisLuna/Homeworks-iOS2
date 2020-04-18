@@ -15,10 +15,10 @@ import Foundation
 //    "Han Solo",
 //    "Din Djarin",
 //]
-var users: Array<User> = [anakin, leya]
+var users: Array<User> = [anakin, leia]
 
 var anakin = User(id: 1, login: "String", password: "String", name: "Anakin Skywalker", avatar: #imageLiteral(resourceName: "anakin.m6HvM"), photos: [one, four], groups: [news])
-var leya = User(id: 2, login: "String", password: "String", name: "Leya Organa", avatar: #imageLiteral(resourceName: "leiatop1-650x574"), photos: [two, three], groups: [travel])
+var leia = User(id: 2, login: "String", password: "String", name: "Leia Organa", avatar: #imageLiteral(resourceName: "leiatop1-650x574"), photos: [two, three], groups: [travel])
 
 var one = Photo(id: 1, description: nil , likesCount: 0, isLikedByMe: false, pic: #imageLiteral(resourceName: "DeathStarII"))
 var two = Photo(id: 2, description: nil, likesCount: 2, isLikedByMe: true, pic: #imageLiteral(resourceName: "DeathStarII"))

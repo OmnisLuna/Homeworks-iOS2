@@ -17,10 +17,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var titlePasswordField: UILabel!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loaderElement1: UIImageView!
+    @IBOutlet weak var loaderElement2: UIImageView!
+    @IBOutlet weak var loaderElement3: UIImageView!
+    @IBOutlet weak var loaderStack: UIStackView!
     
+    let animation = Animations()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        animateLoader()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         titleView.text = "Авторизация"
         titleLoginField.text = "Логин"
         titlePasswordField.text = "Пароль"
@@ -38,9 +46,10 @@ class LoginViewController: UIViewController {
                 object: nil)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        print("2")
+    func animateLoader() {
+        animation.fadeElement(loaderElement1, duration: 0.75, delay: 0.75)
+        animation.fadeElement(loaderElement2, duration: 0.75, delay: 1)
+        animation.fadeElement(loaderElement3, duration: 0.75, delay: 1.25)
     }
     
     @IBAction func loginPressed(_sender: UIButton, forEvent event: UIEvent) {
