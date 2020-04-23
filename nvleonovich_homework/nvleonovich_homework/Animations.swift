@@ -48,4 +48,12 @@ class Animations {
         element.layer.add(animation, forKey: nil)
         
     }
+    
+    public func nextSwipeElement() {
+        
+    }
+    
+    public func previousSwipeElement() {
+        
+    }
 }

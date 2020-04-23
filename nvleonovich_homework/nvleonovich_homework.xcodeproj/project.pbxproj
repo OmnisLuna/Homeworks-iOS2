@@ -19,6 +19,7 @@
 		0461FC5E24317F240049E9A8 /* FriendsPhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461FC5D24317F240049E9A8 /* FriendsPhotoCollectionViewController.swift */; };
 		0461FC722431DB930049E9A8 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461FC712431DB930049E9A8 /* FriendTableViewCell.swift */; };
 		047934BA243516D1009F130B /* MyGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047934B9243516D1009F130B /* MyGroupTableViewCell.swift */; };
+		047FA50B244CA05A0058C140 /* FriendPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FA50A244CA05A0058C140 /* FriendPhotoView.swift */; };
 		048F08CD2444BA0800375D45 /* UsersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F08CC2444BA0800375D45 /* UsersData.swift */; };
 		048F08CF2444BB8B00375D45 /* GroupsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F08CE2444BB8B00375D45 /* GroupsData.swift */; };
 		048F08D42445010500375D45 /* NewsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048F08D32445010500375D45 /* NewsCard.swift */; };
@@ -30,6 +31,7 @@
 		04A9142E2430E435005ABD6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A9142D2430E435005ABD6A /* Assets.xcassets */; };
 		04A914312430E435005ABD6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A9142F2430E435005ABD6A /* LaunchScreen.storyboard */; };
 		04B58553244483BA00B00AB1 /* AvatarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B58552244483BA00B00AB1 /* AvatarShadow.swift */; };
+		04CDE87D244C8B8A00A43C3A /* SwipePhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CDE87C244C8B8A00A43C3A /* SwipePhotoController.swift */; };
 		04EC1145244526A5000B2E6D /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1144244526A5000B2E6D /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,7 @@
 		0461FC5D24317F240049E9A8 /* FriendsPhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		0461FC712431DB930049E9A8 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
 		047934B9243516D1009F130B /* MyGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupTableViewCell.swift; sourceTree = "<group>"; };
+		047FA50A244CA05A0058C140 /* FriendPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoView.swift; sourceTree = "<group>"; };
 		048F08CC2444BA0800375D45 /* UsersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersData.swift; sourceTree = "<group>"; };
 		048F08CE2444BB8B00375D45 /* GroupsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsData.swift; sourceTree = "<group>"; };
 		048F08D32445010500375D45 /* NewsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCard.swift; sourceTree = "<group>"; };
@@ -59,6 +62,7 @@
 		04A914302430E435005ABD6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A914322430E435005ABD6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B58552244483BA00B00AB1 /* AvatarShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarShadow.swift; sourceTree = "<group>"; };
+		04CDE87C244C8B8A00A43C3A /* SwipePhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipePhotoController.swift; sourceTree = "<group>"; };
 		04EC1144244526A5000B2E6D /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,19 +140,21 @@
 		04A914232430E434005ABD6A /* nvleonovich_homework */ = {
 			isa = PBXGroup;
 			children = (
+				04A9142A2430E434005ABD6A /* Main.storyboard */,
 				04000C3D2433F92400E93B56 /* Model */,
 				04000C3A2433D12F00E93B56 /* Groups */,
 				048F08D02444E4A400375D45 /* News */,
 				04000C392433D11200E93B56 /* Friends */,
 				04A914242430E434005ABD6A /* AppDelegate.swift */,
 				04A914282430E434005ABD6A /* LoginViewController.swift */,
-				04A9142A2430E434005ABD6A /* Main.storyboard */,
 				04A9142D2430E435005ABD6A /* Assets.xcassets */,
 				04A9142F2430E435005ABD6A /* LaunchScreen.storyboard */,
 				04A914322430E435005ABD6A /* Info.plist */,
 				0461FC5124317CB30049E9A8 /* ProfileTabBarController.swift */,
 				044F2D1924490A0B00FDE5B2 /* ActivityCounterControl.swift */,
 				044F2D1B244931D500FDE5B2 /* Animations.swift */,
+				04CDE87C244C8B8A00A43C3A /* SwipePhotoController.swift */,
+				047FA50A244CA05A0058C140 /* FriendPhotoView.swift */,
 			);
 			path = nvleonovich_homework;
 			sourceTree = "<group>";
@@ -229,6 +235,7 @@
 				0461FC5E24317F240049E9A8 /* FriendsPhotoCollectionViewController.swift in Sources */,
 				0461FC5C24317E9E0049E9A8 /* FriendsListViewController.swift in Sources */,
 				047934BA243516D1009F130B /* MyGroupTableViewCell.swift in Sources */,
+				04CDE87D244C8B8A00A43C3A /* SwipePhotoController.swift in Sources */,
 				04B58553244483BA00B00AB1 /* AvatarShadow.swift in Sources */,
 				0461FC5824317E6A0049E9A8 /* GroupsSearchTableViewController.swift in Sources */,
 				048F08CD2444BA0800375D45 /* UsersData.swift in Sources */,
@@ -243,6 +250,7 @@
 				048F08CF2444BB8B00375D45 /* GroupsData.swift in Sources */,
 				04000C412433FFEE00E93B56 /* GroupTableViewCell.swift in Sources */,
 				04A914252430E434005ABD6A /* AppDelegate.swift in Sources */,
+				047FA50B244CA05A0058C140 /* FriendPhotoView.swift in Sources */,
 				044F2D1A24490A0B00FDE5B2 /* ActivityCounterControl.swift in Sources */,
 				044F2D1C244931D500FDE5B2 /* Animations.swift in Sources */,
 			);
