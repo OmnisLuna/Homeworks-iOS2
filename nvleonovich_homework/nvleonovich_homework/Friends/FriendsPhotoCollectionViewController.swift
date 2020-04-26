@@ -13,9 +13,7 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
     
     var currentUser: User!
     let animation = Animations()
-    var colorDefault = #colorLiteral(red: 0, green: 0.4539153576, blue: 1, alpha: 1)
-    var colorLiked = #colorLiteral(red: 0.8094672561, green: 0, blue: 0.2113229036, alpha: 1)
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.collectionView.delegate = self
@@ -38,11 +36,7 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
         cell.likesCount.text = "\(currentUser.photos[indexPath.row].likesCount)"
         cell.heartButton.isSelected = currentUser.photos[indexPath.row].isLikedByMe
         cell.friendsPhoto.image = currentUser.photos[indexPath.row].pic
-        if currentUser.photos[indexPath.row].isLikedByMe {
-            cell.likesCount.textColor = colorLiked
-        } else {
-            cell.likesCount.textColor = colorDefault
-        }
+        cell.likesCount.textColor = cell.heartButton.isSelected ? #colorLiteral(red: 0.8094672561, green: 0, blue: 0.2113229036, alpha: 1)  : #colorLiteral(red: 0, green: 0.4539153576, blue: 1, alpha: 1)
         
         //замыкание для тапа на ячейку
         cell.heartButtoonTap = { [weak self] in
@@ -60,14 +54,28 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    @IBAction func openPhotoinGallery(_ sender: Any) {
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "openFullSizePhoto"
+        {
+            let target = segue.destination as! SwipePhotoController
+            target.currentUser = currentUser
+            let index = collectionView.indexPathsForSelectedItems!.first!
+            let photoIndex = index.item
+            target.photoIndex = photoIndex
+        }
+    }
+    
 }
 
 extension FriendsPhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             
-            let cellWidth = 150
+//            let cellWidth = 150
+            let cellWidth = view.bounds.height / 10
             
             return CGSize(width: cellWidth, height: cellWidth)
         }
 }
-    
