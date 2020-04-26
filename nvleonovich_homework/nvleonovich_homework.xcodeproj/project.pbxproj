@@ -11,6 +11,7 @@
 		04000C3F2433F94C00E93B56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04000C3E2433F94C00E93B56 /* User.swift */; };
 		04000C412433FFEE00E93B56 /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04000C402433FFEE00E93B56 /* GroupTableViewCell.swift */; };
 		042053042455E57F008DD9AF /* FullSIzePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042053032455E57F008DD9AF /* FullSIzePhotoView.swift */; };
+		0420530624561BB5008DD9AF /* readme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420530524561BB5008DD9AF /* readme.swift */; };
 		044F2D1A24490A0B00FDE5B2 /* ActivityCounterControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F2D1924490A0B00FDE5B2 /* ActivityCounterControl.swift */; };
 		044F2D1C244931D500FDE5B2 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044F2D1B244931D500FDE5B2 /* Animations.swift */; };
 		0461FC5224317CB30049E9A8 /* ProfileTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461FC5124317CB30049E9A8 /* ProfileTabBarController.swift */; };
@@ -41,6 +42,7 @@
 		04000C3E2433F94C00E93B56 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		04000C402433FFEE00E93B56 /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		042053032455E57F008DD9AF /* FullSIzePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullSIzePhotoView.swift; sourceTree = "<group>"; };
+		0420530524561BB5008DD9AF /* readme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readme.swift; sourceTree = "<group>"; };
 		044F2D1924490A0B00FDE5B2 /* ActivityCounterControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCounterControl.swift; sourceTree = "<group>"; };
 		044F2D1B244931D500FDE5B2 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		0461FC5124317CB30049E9A8 /* ProfileTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabBarController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				0461FC5124317CB30049E9A8 /* ProfileTabBarController.swift */,
 				044F2D1924490A0B00FDE5B2 /* ActivityCounterControl.swift */,
 				044F2D1B244931D500FDE5B2 /* Animations.swift */,
+				0420530524561BB5008DD9AF /* readme.swift */,
 			);
 			path = nvleonovich_homework;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				0461FC5E24317F240049E9A8 /* FriendsPhotoCollectionViewController.swift in Sources */,
 				0461FC5C24317E9E0049E9A8 /* FriendsListViewController.swift in Sources */,
 				047934BA243516D1009F130B /* MyGroupTableViewCell.swift in Sources */,
+				0420530624561BB5008DD9AF /* readme.swift in Sources */,
 				04CDE87D244C8B8A00A43C3A /* SwipePhotoController.swift in Sources */,
 				04B58553244483BA00B00AB1 /* AvatarShadow.swift in Sources */,
 				0461FC5824317E6A0049E9A8 /* GroupsSearchTableViewController.swift in Sources */,
