@@ -61,8 +61,8 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
         if segue.identifier == "openFullSizePhoto"
         {
             let target = segue.destination as! SwipePhotoController
-            let index = collectionView.indexPathsForSelectedItems!.first!
             target.currentUser = currentUser
+            let index = collectionView.indexPathsForSelectedItems!.first!
             let photoIndex = index.item
             target.photoIndex = photoIndex
         }
@@ -73,8 +73,8 @@ class FriendsPhotoCollectionViewController: UICollectionViewController {
 extension FriendsPhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             
-            let cellWidth = 150
-//            let cellWidth = (view.bounds.width / 3)
+//            let cellWidth = 150
+            let cellWidth = view.bounds.height / 10
             
             return CGSize(width: cellWidth, height: cellWidth)
         }

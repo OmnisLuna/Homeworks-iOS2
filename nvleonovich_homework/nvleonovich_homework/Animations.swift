@@ -30,8 +30,8 @@ class Animations {
         animation.fromValue = 0
         animation.toValue = 1
         animation.duration = 1
-        animation.autoreverses = true
-        animation.fillMode = CAMediaTimingFillMode.backwards
+        animation.autoreverses = false
+//        animation.fillMode = CAMediaTimingFillMode.backwards
         element.layer.add(animation, forKey: nil)
         
     }
@@ -44,7 +44,7 @@ class Animations {
         animation.duration = 2.5
         animation.stiffness = 180
         animation.mass = 2
-        animation.fillMode = CAMediaTimingFillMode.backwards
+//        animation.fillMode = CAMediaTimingFillMode.backwards
         element.layer.add(animation, forKey: nil)
         
     }
